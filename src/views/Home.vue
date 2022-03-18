@@ -1,6 +1,14 @@
 <template>
   <div class="home">
     <text-ellipsis :text="text" :maxLine="3" :lineHeight="24"> </text-ellipsis>
+
+    <div class="flex-container">
+      <div class="item">仓库失火烧毁大量老坛酸菜牛肉面1</div>
+      <div class="item">仓库失火烧毁大量老坛酸菜牛肉面2</div>
+      <div class="item">仓库失火烧毁大量老坛酸菜牛肉面3</div>
+      <div class="item">仓库失火烧毁大量老坛酸菜牛肉面4</div>
+      <div class="item">仓库失火烧毁大量老坛酸菜牛肉面5</div>
+    </div>
   </div>
 </template>
 
@@ -21,9 +29,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.home {
-  width: 375px;
-}
 .box {
   margin-top: 100px;
   width: 200px;
@@ -41,6 +46,26 @@ export default {
     border: 1px solid orange;
     pointer-events: none;
     transform: scale(0.5);
+  }
+}
+
+.flex-container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // 此处增加伪类用于最后一行左对齐展示
+  &:after {
+    content: "";
+    width: 120px;
+  }
+  .item {
+    width: 120px;
+    background: pink;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    padding: 6px;
+    box-sizing: border-box;
   }
 }
 </style>
