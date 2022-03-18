@@ -1,8 +1,15 @@
 <template>
   <div id="app">
-    <router-view />
+    <Home></Home>
   </div>
 </template>
+
+<script>
+import Home from "./views/Home";
+export default {
+  components: { Home },
+};
+</script>
 
 <style lang="less">
 body {
